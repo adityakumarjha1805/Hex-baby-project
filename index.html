@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pip's Dreamland — a tiny portfolio for a junior dream engineer."
+    />
+    <title>PIP.EXE | Pip's Dreamland</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Pip's Dreamland home">
+          <span class="brand-mark">P</span>
+          <span class="brand-text">PIP.EXE</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About Pip</a>
+          <a href="#projects" class="nav-link">Dream Projects</a>
+          <a href="#lab" class="nav-link">Dream Lab</a>
+          <a href="#story" class="nav-link">Storybook</a>
+        </div>
+
+        <button class="wake-button header-wake" type="button" id="wakeBtnHeader">
+          WAKE UP!
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home" aria-labelledby="heroTitle">
+        <div class="stars-layer" aria-hidden="true">
+          <span class="star s1">✦</span>
+          <span class="star s2">✦</span>
+          <span class="star s3">✦</span>
+          <span class="star s4">✦</span>
+          <span class="pixel-heart heart-one">♥</span>
+          <span class="pixel-heart heart-two">♥</span>
+          <span class="tiny-cloud cloud-doodle">☁</span>
+          <span class="doodle doodle-one">〰</span>
+          <span class="doodle doodle-two">✳</span>
+          <button
+            class="moon"
+            id="moonSecretBtn"
+            type="button"
+            aria-label="Inspect the moon for a secret"
+            aria-describedby="moonSecretHint"
+            aria-controls="moonSecretBadge"
+            aria-expanded="false"
+          >☾</button>
+          <span class="planet p1">●</span>
+          <span class="planet p2">●</span>
+          <span class="sticker sticker-cloud">DREAM<br />BIG!</span>
+          <span class="sticker sticker-star" aria-hidden="true">★</span>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">THE MIDNIGHT NURSERY</p>
+            <h1 id="heroTitle">HELLO, EARTHLING!</h1>
+            <h2>I'm Pip. I build the dreams you fall asleep inside.</h2>
+            <p class="lead">
+              Junior Dream Engineer, professional cloud pillow tester, and inventor of
+              dreams too silly to fit inside your imagination.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" type="button" id="meetBtn">MEET PIP!</button>
+              <button class="secondary-btn" type="button" id="enterBtn">
+                ENTER DREAMLAND
+              </button>
+            </div>
+            <div class="mini-status" aria-live="polite">
+              <span class="status-dot"></span>
+              <span id="pipStatusText">PIP STATUS: 87% SLEEPY</span>
+            </div>
+            <p class="hero-dialogue" id="pipDialogue" aria-live="polite">
+              Pip says: “I was absolutely not napping on the job.”
+            </p>
+            <aside class="retro-status" aria-label="Midnight Nursery status panel">
+              <div class="retro-status-heading">
+                <span class="retro-led" aria-hidden="true"></span>
+                NURSERY.EXE <span>ONLINE</span>
+              </div>
+              <p>Dreams delivered: <strong id="dreamCounter" aria-live="polite">0</strong></p>
+              <p>Cloud forecast: <strong>99% fluffy</strong></p>
+              <span class="moon-secret-hint" id="moonSecretHint">Psst... the moon knows a secret.</span>
+              <span class="secret-badge" id="moonSecretBadge" role="status" hidden>
+                ✦ MOON FRIEND UNLOCKED ✦
+              </span>
+            </aside>
+          </div>
+
+          <div class="hero-art">
+            <div class="cloud cloud-large"></div>
+            <div class="cloud cloud-small"></div>
+            <div class="pip-stage">
+              <div class="pip-speech-bubble" id="pipSpeechBubble" aria-live="polite">
+                You look like you need a nap. Respectfully.
+              </div>
+              <div class="pip-figure" id="pipFigure">
+                <img
+                  src="pip_avatar_cloud.png"
+                  alt="Pip, a friendly skull baby in a starry nightcap, floating on a cloud"
+                  width="896"
+                  height="1090"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div class="dream-sparkles" aria-hidden="true">
+              <span>✦</span>
+              <span>✦</span>
+              <span>✦</span>
+              <span>✦</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow purple">WHO IS THIS TINY CREATURE?</p>
+            <h3>About Pip</h3>
+          </div>
+
+          <div class="about-layout">
+            <article class="profile-card card-sheen" aria-label="Pip's character profile">
+              <div class="portrait-wrap">
+                <span class="profile-sticker sticker-level">LEVEL<br />01</span>
+                <span class="profile-sticker sticker-star" aria-hidden="true">✦</span>
+                <button
+                  class="mini-portrait"
+                  id="portraitFactBtn"
+                  type="button"
+                  aria-label="Reveal a random fact about Pip"
+                  aria-describedby="portraitSecretHint"
+                >
+                  <img
+                    src="pip_portrait.png"
+                    alt="Portrait of Pip, a friendly skull baby in a starry nightcap"
+                    width="682"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="portrait-secret-hint" id="portraitSecretHint">Tap Pip for a tiny secret!</span>
+                </button>
+                <p class="pip-profile-dialogue" id="pipProfileDialogue" aria-live="polite">
+                  “My nightcap has a secret pocket for extra stardust.”
+                </p>
+                <p class="portrait-fact" id="portraitFact" role="status" hidden></p>
+              </div>
+              <div class="profile-meta">
+                <p class="engineer-badge"><span aria-hidden="true">✦</span> Junior Dream Engineer <b>— Level 01</b></p>
+                <div class="meta-row">
+                  <span class="label">Name</span>
+                  <strong>Pip</strong>
+                </div>
+                <div class="meta-row">
+                  <span class="label">Species</span>
+                  <strong>Skull Baby</strong>
+                </div>
+                <div class="meta-row">
+                  <span class="label">Job</span>
+                  <strong>Junior Dream Engineer</strong>
+                </div>
+                <div class="meta-row">
+                  <span class="label">Location</span>
+                  <strong>The Midnight Nursery</strong>
+                </div>
+                <div class="meta-row">
+                  <span class="label">Personality</span>
+                  <strong id="personalityDescription">A curious little dream-builder who is easily delighted.</strong>
+                </div>
+                <div class="meta-row">
+                  <span class="label">Special skill</span>
+                  <strong>Turning ordinary thoughts into extraordinary dreams</strong>
+                </div>
+                <div class="mood-picker" role="group" aria-labelledby="moodPickerLabel">
+                  <p class="mood-picker-label" id="moodPickerLabel">Pip's current mood</p>
+                  <div class="mood-options">
+                    <button class="mood-option selected" type="button" data-mood="Sleepy" aria-pressed="true">😴 Sleepy</button>
+                    <button class="mood-option" type="button" data-mood="Curious" aria-pressed="false">🔎 Curious</button>
+                    <button class="mood-option" type="button" data-mood="Magical" aria-pressed="false">✨ Magical</button>
+                    <button class="mood-option" type="button" data-mood="Chaotic" aria-pressed="false">🌀 Chaotic</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <section class="scanner-panel card-sheen" aria-labelledby="scannerTitle">
+              <div class="scanner-top">
+                <h4 class="scanner-tag" id="scannerTitle">PERSONALITY SCANNER</h4>
+                <button class="scan-button" type="button" id="scanPersonalityBtn">
+                  SCAN MY PERSONALITY
+                </button>
+              </div>
+              <div class="scanner-output" aria-live="polite" id="scannerOutput">
+                <div class="scanner-readout">
+                  <span class="scanner-indicator" aria-hidden="true">✦</span>
+                  <p>Scanner ready! Pip's dream personality is waiting to be discovered.</p>
+                </div>
+              </div>
+              <div class="status-grid" id="statusGrid" aria-label="Pip's current character stats">
+                <div class="chalk-card">
+                  <span class="chalk-label">Energy</span>
+                  <b data-stat="energy">72%</b>
+                  <div class="meter" role="progressbar" aria-label="Energy" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72"><span style="width: 72%"></span></div>
+                </div>
+                <div class="chalk-card">
+                  <span class="chalk-label">Imagination</span>
+                  <b data-stat="imagination">96%</b>
+                  <div class="meter" role="progressbar" aria-label="Imagination" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96"><span style="width: 96%"></span></div>
+                </div>
+                <div class="chalk-card">
+                  <span class="chalk-label">Dream power</span>
+                  <b data-stat="dreamPower">88%</b>
+                  <div class="meter" role="progressbar" aria-label="Dream power" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><span style="width: 88%"></span></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="container">
+          <div class="section-heading center">
+            <p class="eyebrow">DREAM PROJECTS</p>
+            <h3>Pip's tiny genius catalog</h3>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card card-sheen" data-project="lullaby">
+              <div class="project-art">
+                <img
+                  src="pip_lullaby_box.png"
+                  alt="A colorful bedtime music box from Pip's Lullaby Lab"
+                  width="1024"
+                  height="924"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 01</span>
+                <h4>The Lullaby Lab</h4>
+                <p>
+                  A magical music box that creates tiny bedtime melodies for restless dreamers.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="lullaby">Open the box</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card card-sheen" data-project="nightlight">
+              <div class="project-art">
+                <img
+                  src="pip_dream_lantern.png"
+                  alt="A glowing pastel dream lantern from Pip's nightlight collection"
+                  width="1024"
+                  height="914"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 02</span>
+                <h4>Nightlight Collection</h4>
+                <p>
+                  Glowing little lamps designed to keep the monsters away and the dreams cozy.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="nightlight">Switch the glow</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card card-sheen" data-project="delivery">
+              <div class="project-art map-art" aria-hidden="true">
+                <span class="map-point p-one">A</span>
+                <span class="map-point p-two">B</span>
+                <span class="map-point p-three">C</span>
+                <span class="map-route"></span>
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 03</span>
+                <h4>Dream Delivery Routes</h4>
+                <p>
+                  An imaginary navigation system for delivering dreams across rooftops.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="delivery">Map a route</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card card-sheen" data-project="blocks">
+              <div class="project-art blocks-art" aria-hidden="true">
+                <span class="toy-block pink"></span>
+                <span class="toy-block yellow"></span>
+                <span class="toy-block blue"></span>
+                <span class="toy-block mint"></span>
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 04</span>
+                <h4>Rattle &amp; Block Toys</h4>
+                <p>
+                  A collection of toys that makes learning about shapes and colors fun.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="blocks">Play with blocks</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card card-sheen" data-project="storybook">
+              <div class="project-art storybook-art" aria-hidden="true">
+                <div class="storybook-cover">📖</div>
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 05</span>
+                <h4>Bedtime Storybook</h4>
+                <p>
+                  Stories invented by Pip for little creatures who aren't ready to sleep.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="storybook">Read a story</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card card-sheen" data-project="growth">
+              <div class="project-art chart-art" aria-hidden="true">
+                <div class="bars">
+                  <span style="height: 62%"></span>
+                  <span style="height: 76%"></span>
+                  <span style="height: 88%"></span>
+                  <span style="height: 94%"></span>
+                </div>
+              </div>
+              <div class="project-body">
+                <span class="project-badge">Project 06</span>
+                <h4>Pip's Growth Chart</h4>
+                <p>
+                  A completely scientific chart measuring Pip's progress in dream engineering.
+                </p>
+                <div class="project-demo">
+                  <button class="demo-btn" type="button" data-demo="growth">Reveal results</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section lab-section" id="lab">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">DREAM LAB</p>
+            <h3>Interactive playground</h3>
+          </div>
+
+          <div class="lab-grid">
+            <div class="lab-panel card-sheen" id="dreamGeneratorPanel">
+              <h4>Dream Generator</h4>
+              <div class="field-row">
+                <label for="dreamMood">Mood</label>
+                <select id="dreamMood">
+                  <option value="Happy">Happy</option>
+                  <option value="Magical">Magical</option>
+                  <option value="Sleepy">Sleepy</option>
+                  <option value="Chaotic">Chaotic</option>
+                </select>
+              </div>
+              <div class="field-row">
+                <label for="dreamSetting">Setting</label>
+                <select id="dreamSetting">
+                  <option value="Moon">Moon</option>
+                  <option value="Cloud Kingdom">Cloud Kingdom</option>
+                  <option value="Candy Forest">Candy Forest</option>
+                  <option value="Starry Ocean">Starry Ocean</option>
+                </select>
+              </div>
+              <button class="lab-button" type="button" id="generateDreamBtn">
+                GENERATE MY DREAM
+              </button>
+              <div class="dream-bubble" id="dreamResult" aria-live="polite">
+                Your dream is still knitting itself together.
+              </div>
+            </div>
+
+            <div class="lab-panel card-sheen" id="magicFactoryPanel">
+              <h4>Magic Button Factory</h4>
+              <div class="magic-grid">
+                <button class="magic-btn star-burst" type="button">Burst</button>
+                <button class="magic-btn theme-shift" type="button">Theme</button>
+                <button class="magic-btn dance-pip" type="button">Dance</button>
+                <button class="magic-btn silly-message" type="button">Message</button>
+                <button class="magic-btn bubble-burst" type="button">Bubbles</button>
+                <button class="magic-btn surprise" type="button">Surprise</button>
+              </div>
+              <button class="lab-button secondary" type="button" id="resetMagicBtn">
+                RESET THE FACTORY
+              </button>
+            </div>
+
+            <div class="lab-panel card-sheen" id="starGamePanel">
+              <h4>Star Collection Game</h4>
+              <div class="game-summary">
+                <span>Score: <strong id="starScore">0</strong></span>
+                <span>Time: <strong id="starTimer">15</strong>s</span>
+              </div>
+              <div class="star-game-area" id="starGameArea" aria-label="Star collection game area"></div>
+              <button class="lab-button" type="button" id="replayStarGameBtn">REPLAY</button>
+            </div>
+
+            <div class="lab-panel card-sheen" id="dreamMachinePanel">
+              <h4>Dream Machine</h4>
+              <div class="machine-slider">
+                <label for="imaginationRange">Imagination</label>
+                <input id="imaginationRange" type="range" min="0" max="100" value="70" />
+              </div>
+              <div class="machine-slider">
+                <label for="sleepinessRange">Sleepiness</label>
+                <input id="sleepinessRange" type="range" min="0" max="100" value="80" />
+              </div>
+              <div class="machine-slider">
+                <label for="sparkleRange">Sparkle intensity</label>
+                <input id="sparkleRange" type="range" min="0" max="100" value="60" />
+              </div>
+              <button class="lab-button" type="button" id="buildDreamBtn">BUILD MY DREAM</button>
+              <div class="machine-output" id="dreamMachineOutput" aria-live="polite">
+                A perfectly cozy moony nap.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story-section" id="story">
+        <div class="container">
+          <div class="section-heading center">
+            <p class="eyebrow">PIP'S STORY</p>
+            <h3>An interactive journey</h3>
+          </div>
+
+          <div class="story-stage card-sheen" aria-live="polite">
+            <div class="story-progress" aria-label="Story progress">
+              <div class="progress-bar" id="storyProgressBar"></div>
+            </div>
+
+            <div class="story-viewport">
+              <article class="story-card active" data-chapter="0">
+                <div class="story-emoji">✦</div>
+                <p class="story-kicker">Chapter 1</p>
+                <h4>The First Spark</h4>
+                <p>
+                  Pip discovers a tiny glowing star inside an old nursery clock and decides it looks
+                  very much like a good idea wearing a nightcap.
+                </p>
+              </article>
+
+              <article class="story-card" data-chapter="1">
+                <div class="story-emoji">🏠</div>
+                <p class="story-kicker">Chapter 2</p>
+                <h4>The Midnight Nursery</h4>
+                <p>
+                  Pip transforms an abandoned attic into a magical dream laboratory full of moonbeams,
+                  wool blankets, and suspiciously cheerful clouds.
+                </p>
+              </article>
+
+              <article class="story-card" data-chapter="2">
+                <div class="story-emoji">⚙️</div>
+                <p class="story-kicker">Chapter 3</p>
+                <h4>The Great Dream Machine</h4>
+                <p>
+                  Pip invents a machine that turns tiny thoughts into rainbow dreams and accidentally
+                  creates a jellybean thunderstorm.
+                </p>
+              </article>
+
+              <article class="story-card" data-chapter="3">
+                <div class="story-emoji">🌙</div>
+                <p class="story-kicker">Chapter 4</p>
+                <h4>The First Delivery</h4>
+                <p>
+                  Pip delivers a dream to a lonely little moon, who blushed so much it glowed brighter
+                  than the stars around it.
+                </p>
+              </article>
+
+              <article class="story-card" data-chapter="4">
+                <div class="story-emoji">✨</div>
+                <p class="story-kicker">Chapter 5</p>
+                <h4>The Dream Engineer</h4>
+                <p>
+                  Pip learns that imagination is the most powerful invention in the world, and that a
+                  sleepy baby can make bedtime feel like a cosmic adventure.
+                </p>
+              </article>
+            </div>
+
+            <div class="story-controls">
+              <button class="story-nav" type="button" id="prevStoryBtn">PREVIOUS</button>
+              <span class="chapter-label" id="storyCounter">1 / 5</span>
+              <button class="story-nav" type="button" id="nextStoryBtn">NEXT CHAPTER</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section guestbook-section" id="guestbook">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">GUESTBOOK</p>
+            <h3>Leave a little magic</h3>
+          </div>
+
+          <div class="guestbook-layout">
+            <form id="guestbookForm" novalidate>
+              <div class="field-row">
+                <label for="guestName">Name or nickname</label>
+                <input id="guestName" name="guestName" type="text" maxlength="40" />
+              </div>
+
+              <div class="field-row">
+                <label for="guestDream">Favorite dream</label>
+                <input id="guestDream" name="guestDream" type="text" maxlength="60" />
+              </div>
+
+              <div class="field-row">
+                <label for="guestMessage">Friendly message</label>
+                <textarea
+                  id="guestMessage"
+                  name="guestMessage"
+                  rows="4"
+                  maxlength="220"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="primary-btn" type="submit">SIGN THE GUESTBOOK</button>
+                <button class="secondary-btn small" type="button" id="clearGuestbookBtn">
+                  CLEAR ENTRIES
+                </button>
+              </div>
+
+              <p class="form-feedback" id="guestbookFeedback" aria-live="polite"></p>
+            </form>
+
+            <aside class="entries-panel card-sheen" aria-live="polite">
+              <div class="entries-header">
+                <h4>Dream comments</h4>
+                <span class="tiny-note">Stored only in your browser</span>
+              </div>
+              <ul id="guestbookEntries" class="guestbook-entries"></ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">P</span>
+          <span class="brand-text">PIP.EXE</span>
+        </div>
+        <p>Made with 100% imagination and 0% bedtime discipline.</p>
+        <div class="footer-actions">
+          <button class="footer-btn" type="button" id="scrollTopBtn">↑ RETURN TO TOP</button>
+          <button class="footer-btn" type="button" id="visitorCounterBtn" aria-label="Visitor interaction counter">
+            VISITS: <span id="visitCount">0</span>
+          </button>
+        </div>
+        <p class="copyright">© 2087 Midnight Nursery Dreamworks. All rights reserved.</p>
+        <button class="secret-btn" type="button" id="secretBtn" aria-label="Reveal the secret message">
+          YOU FOUND THE SECRET!
+        </button>
+        <p class="random-message" id="randomMessage">Achievement unlocked: Professional Cloud Inspector.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
