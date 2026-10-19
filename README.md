@@ -33,11 +33,27 @@ python -m http.server 8000
 
 Then visit http://localhost:8000
 
+## Deploy to Vercel
+
+This is a static HTML, CSS, and JavaScript site. It has no build step, backend, or required environment variables.
+
+### Deploy from Git
+
+1. Push the project files to a GitHub, GitLab, or Bitbucket repository.
+2. Import the repository in Vercel.
+3. Use the project root as the root directory and select **Other** as the framework preset if prompted.
+4. Deploy with the included `vercel.json`; it serves the project-root files as-is without installing packages or running a build.
+
+### Deploy with the Vercel CLI
+
+From the project directory, run `npx vercel` and follow the prompts. To publish to production, run `npx vercel --prod`.
+
 ## Files
 
 - `index.html` — page structure and section content
 - `style.css` — theme, layout, responsive design, and animations
 - `script.js` — interactive logic, state handling, and localStorage behavior
+- `vercel.json` — serves this static site from the project root without a build step
 
 ## Judging checklist
 
