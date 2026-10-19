@@ -17,9 +17,9 @@ A playful single-page portfolio experience for Pip, a junior dream engineer who 
   - Rattle & Block Toys
   - Bedtime Storybook
   - Pip's Growth Chart
-- Dream Lab mini-experiments including dream generator, magic buttons, star game, and dream machine
-- Storybook narrative with chapter navigation
-- Guestbook with validation, safe rendering, and localStorage persistence
+- Pip's Midnight Workshop with a local story-based dream generator, selectable dream ingredients, magic buttons, an on-demand star-catching game, and an interactive dream machine
+- Five-chapter branching storybook with keyboard-accessible chapter selection, collectible stars, and a local browser bookmark
+- Keepsake guestbook with inline validation, safe text-only rendering, localStorage persistence, individual deletion, and a 50-note limit
 - Footer with visitor counter, random messages, and a secret reveal
 
 ## Run locally

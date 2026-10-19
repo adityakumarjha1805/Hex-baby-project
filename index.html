@@ -8,6 +8,7 @@
       content="Pip's Dreamland — a tiny portfolio for a junior dream engineer."
     />
     <title>PIP.EXE | Pip's Dreamland</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ffb6d5'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' font-weight='bold' fill='%23572747'%3EP%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -377,13 +378,45 @@
       <section class="section lab-section" id="lab">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">DREAM LAB</p>
-            <h3>Interactive playground</h3>
+            <p class="eyebrow">PIP'S MIDNIGHT WORKSHOP</p>
+            <h3>Let's Make a Little Dream!</h3>
+            <p class="lab-intro-copy">Pick a feeling, sprinkle some stardust, and see what Pip dreams up.</p>
+          </div>
+
+          <div class="workshop-welcome card-sheen">
+            <div class="workshop-art">
+              <img src="pip_avatar_cloud.png" alt="Pip, a friendly skull baby in a starry nightcap, ready to make dreams" width="896" height="1090" loading="lazy" decoding="async" />
+              <span class="workshop-orbit orbit-one" aria-hidden="true">✦</span>
+              <span class="workshop-orbit orbit-two" aria-hidden="true">☾</span>
+            </div>
+            <div class="workshop-welcome-copy">
+              <p class="workshop-sticker">NURSERY.EXE // OPEN</p>
+              <h4>Welcome to my cozy corner of the sleepy internet!</h4>
+              <p>I'm Pip, your Junior Dream Engineer. The buttons are real, the dreams are made right here, and the moon is mostly supervision.</p>
+              <p class="workshop-greeting" id="workshopGreeting" aria-live="polite">Pip says: “Ooooh! Which dream shall we build today?”</p>
+              <div class="workshop-energy">
+                <div class="workshop-energy-label">
+                  <span>Dreamy energy</span>
+                  <strong id="workshopEnergyValue">87%</strong>
+                </div>
+                <div class="workshop-energy-meter" role="progressbar" aria-label="Pip's dreamy energy" aria-valuemin="0" aria-valuemax="100" aria-valuenow="87">
+                  <span id="workshopEnergyBar"></span>
+                </div>
+              </div>
+            </div>
+            <span class="workshop-stamp" aria-hidden="true">TINY<br />DREAM<br />FACTORY</span>
           </div>
 
           <div class="lab-grid">
             <div class="lab-panel card-sheen" id="dreamGeneratorPanel">
-              <h4>Dream Generator</h4>
+              <div class="lab-panel-heading">
+                <span class="lab-icon" aria-hidden="true">✧</span>
+                <div>
+                  <p class="lab-kicker">EXPERIMENT 01</p>
+                  <h4>Dream Generator</h4>
+                </div>
+              </div>
+              <p class="lab-panel-intro">A tiny story-maker, powered by Pip's imagination (and zero internet magic).</p>
               <div class="field-row">
                 <label for="dreamMood">Mood</label>
                 <select id="dreamMood">
@@ -402,16 +435,31 @@
                   <option value="Starry Ocean">Starry Ocean</option>
                 </select>
               </div>
+              <div class="dream-sprinkles" role="group" aria-label="Choose a dream ingredient">
+                <span class="dream-sprinkles-label">Sprinkle in one little thing</span>
+                <button class="dream-sprinkle selected" type="button" data-dream-spark="a shy comet">☄️ A shy comet</button>
+                <button class="dream-sprinkle" type="button" data-dream-spark="a pocket-sized dragon">🐉 A tiny dragon</button>
+                <button class="dream-sprinkle" type="button" data-dream-spark="a floating teacup">🫖 A floaty teacup</button>
+              </div>
               <button class="lab-button" type="button" id="generateDreamBtn">
-                GENERATE MY DREAM
+                ✨ MAKE MY DREAM
               </button>
-              <div class="dream-bubble" id="dreamResult" aria-live="polite">
-                Your dream is still knitting itself together.
+              <div class="dream-output" id="dreamOutput" aria-live="polite" aria-atomic="true">
+                <span class="dream-output-label">YOUR DREAM NOTE</span>
+                <p class="dream-bubble" id="dreamResult">Your dream is still knitting itself together.</p>
+                <button class="dream-copy-btn" id="copyDreamBtn" type="button" disabled>Copy dream</button>
               </div>
             </div>
 
             <div class="lab-panel card-sheen" id="magicFactoryPanel">
-              <h4>Magic Button Factory</h4>
+              <div class="lab-panel-heading">
+                <span class="lab-icon" aria-hidden="true">✹</span>
+                <div>
+                  <p class="lab-kicker">EXPERIMENT 02</p>
+                  <h4>Magic Button Factory</h4>
+                </div>
+              </div>
+              <p class="lab-panel-intro">Pull a very silly lever. Pip checked the buttons twice (probably).</p>
               <div class="magic-grid">
                 <button class="magic-btn star-burst" type="button">Burst</button>
                 <button class="magic-btn theme-shift" type="button">Theme</button>
@@ -420,23 +468,39 @@
                 <button class="magic-btn bubble-burst" type="button">Bubbles</button>
                 <button class="magic-btn surprise" type="button">Surprise</button>
               </div>
+              <div class="factory-output machine-output" id="magicFactoryOutput" aria-live="polite">The tiny magic switches are ready for testing.</div>
               <button class="lab-button secondary" type="button" id="resetMagicBtn">
                 RESET THE FACTORY
               </button>
             </div>
 
             <div class="lab-panel card-sheen" id="starGamePanel">
-              <h4>Star Collection Game</h4>
+              <div class="lab-panel-heading">
+                <span class="lab-icon" aria-hidden="true">★</span>
+                <div>
+                  <p class="lab-kicker">EXPERIMENT 03</p>
+                  <h4>Star Catcher</h4>
+                </div>
+              </div>
+              <p class="lab-panel-intro">Catch as many twinkles as you can before bedtime.</p>
               <div class="game-summary">
                 <span>Score: <strong id="starScore">0</strong></span>
                 <span>Time: <strong id="starTimer">15</strong>s</span>
               </div>
-              <div class="star-game-area" id="starGameArea" aria-label="Star collection game area"></div>
-              <button class="lab-button" type="button" id="replayStarGameBtn">REPLAY</button>
+              <div class="star-game-area" id="starGameArea" aria-label="Star collection game area" aria-describedby="starGameStatus"></div>
+              <p class="game-status" id="starGameStatus" aria-live="polite">Ready when you are, star catcher.</p>
+              <button class="lab-button" type="button" id="replayStarGameBtn">START CATCHING STARS</button>
             </div>
 
             <div class="lab-panel card-sheen" id="dreamMachinePanel">
-              <h4>Dream Machine</h4>
+              <div class="lab-panel-heading">
+                <span class="lab-icon" aria-hidden="true">⚙</span>
+                <div>
+                  <p class="lab-kicker">EXPERIMENT 04</p>
+                  <h4>Dream Machine</h4>
+                </div>
+              </div>
+              <p class="lab-panel-intro">Set the dials and see what sort of dream the machine invents.</p>
               <div class="machine-slider">
                 <label for="imaginationRange">Imagination</label>
                 <input id="imaginationRange" type="range" min="0" max="100" value="70" />
@@ -463,69 +527,57 @@
           <div class="section-heading center">
             <p class="eyebrow">PIP'S STORY</p>
             <h3>An interactive journey</h3>
+            <p class="story-intro">Every little dream begins with a tiny spark. Come along with Pip!</p>
           </div>
 
-          <div class="story-stage card-sheen" aria-live="polite">
-            <div class="story-progress" aria-label="Story progress">
-              <div class="progress-bar" id="storyProgressBar"></div>
+          <div class="storybook-hero card-sheen">
+            <div class="storybook-hero-art">
+              <img src="pip_avatar_cloud.png" alt="Pip, a friendly skull baby in a starry nightcap, ready to tell a bedtime story" width="896" height="1090" loading="lazy" decoding="async" />
+              <span class="storybook-hero-star hero-star-one" aria-hidden="true">✦</span>
+              <span class="storybook-hero-star hero-star-two" aria-hidden="true">✧</span>
             </div>
-
-            <div class="story-viewport">
-              <article class="story-card active" data-chapter="0">
-                <div class="story-emoji">✦</div>
-                <p class="story-kicker">Chapter 1</p>
-                <h4>The First Spark</h4>
-                <p>
-                  Pip discovers a tiny glowing star inside an old nursery clock and decides it looks
-                  very much like a good idea wearing a nightcap.
-                </p>
-              </article>
-
-              <article class="story-card" data-chapter="1">
-                <div class="story-emoji">🏠</div>
-                <p class="story-kicker">Chapter 2</p>
-                <h4>The Midnight Nursery</h4>
-                <p>
-                  Pip transforms an abandoned attic into a magical dream laboratory full of moonbeams,
-                  wool blankets, and suspiciously cheerful clouds.
-                </p>
-              </article>
-
-              <article class="story-card" data-chapter="2">
-                <div class="story-emoji">⚙️</div>
-                <p class="story-kicker">Chapter 3</p>
-                <h4>The Great Dream Machine</h4>
-                <p>
-                  Pip invents a machine that turns tiny thoughts into rainbow dreams and accidentally
-                  creates a jellybean thunderstorm.
-                </p>
-              </article>
-
-              <article class="story-card" data-chapter="3">
-                <div class="story-emoji">🌙</div>
-                <p class="story-kicker">Chapter 4</p>
-                <h4>The First Delivery</h4>
-                <p>
-                  Pip delivers a dream to a lonely little moon, who blushed so much it glowed brighter
-                  than the stars around it.
-                </p>
-              </article>
-
-              <article class="story-card" data-chapter="4">
-                <div class="story-emoji">✨</div>
-                <p class="story-kicker">Chapter 5</p>
-                <h4>The Dream Engineer</h4>
-                <p>
-                  Pip learns that imagination is the most powerful invention in the world, and that a
-                  sleepy baby can make bedtime feel like a cosmic adventure.
-                </p>
-              </article>
+            <div class="storybook-hero-copy">
+              <p class="storybook-sticker">MIDNIGHT NURSERY • STORY NO. 01</p>
+              <h4>A little light for the night sky</h4>
+              <p>Turn the pages, make a few choices, and help Pip find the way home for a very lost little star.</p>
+              <div class="bookmark-bar" id="storyBookmarkBar">
+                <span class="bookmark-ribbon" aria-hidden="true">BOOKMARK</span>
+                <p id="bookmarkMessage" aria-live="polite">Your story is ready whenever you are.</p>
+                <div class="bookmark-actions">
+                  <button class="story-nav" type="button" id="continueStoryBtn" hidden>CONTINUE YOUR STORY</button>
+                  <button class="story-nav" type="button" id="newStoryBtn">START A NEW ADVENTURE</button>
+                </div>
+                <span class="bookmark-local-note">Saved in this browser only</span>
+              </div>
             </div>
+          </div>
 
+          <div class="story-bookmark-status" id="storyBookmarkStatus" role="status"></div>
+          <nav class="chapter-toc card-sheen" aria-label="Story chapters">
+            <p class="toc-title">PICK A PAGE</p>
+            <div class="chapter-list" id="chapterList"></div>
+          </nav>
+
+          <div class="story-stage card-sheen">
+            <div class="story-stage-top">
+              <div class="story-progress" role="progressbar" aria-label="Story progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+                <div class="progress-bar" id="storyProgressBar"></div>
+              </div>
+              <span class="bookmark-indicator" id="bookmarkIndicator">BOOKMARK • PAGE 1</span>
+            </div>
+            <div class="story-viewport" id="storyScene"></div>
+            <p class="story-live-status visually-hidden" id="storyLiveStatus" aria-live="polite" aria-atomic="true"></p>
             <div class="story-controls">
-              <button class="story-nav" type="button" id="prevStoryBtn">PREVIOUS</button>
-              <span class="chapter-label" id="storyCounter">1 / 5</span>
-              <button class="story-nav" type="button" id="nextStoryBtn">NEXT CHAPTER</button>
+              <button class="story-nav" type="button" id="prevStoryBtn">← PREVIOUS</button>
+              <span class="chapter-label" id="storyCounter">Chapter 1 of 5</span>
+              <button class="story-nav" type="button" id="nextStoryBtn">NEXT CHAPTER →</button>
+              <button class="story-nav restart-story-btn" type="button" id="restartStoryBtn">RESTART STORY</button>
+            </div>
+            <div class="story-complete card-sheen" id="storyComplete" hidden>
+              <span aria-hidden="true">✦ ✦ ✦</span>
+              <h4>Dream Keeper</h4>
+              <p id="storyEndingText">The star is home, the nursery is glowing, and Pip has one more dream to share.</p>
+              <button class="primary-btn" type="button" id="readAgainBtn">READ AGAIN</button>
             </div>
           </div>
         </div>
@@ -535,19 +587,22 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">GUESTBOOK</p>
-            <h3>Leave a little magic</h3>
+            <h3>Pip's Keepsake Wall</h3>
+            <p class="guestbook-invitation">Pip says: “Leave a tiny note in my bedtime journal. Your words stay on this device, tucked safely in this browser.”</p>
           </div>
 
           <div class="guestbook-layout">
             <form id="guestbookForm" novalidate>
               <div class="field-row">
                 <label for="guestName">Name or nickname</label>
-                <input id="guestName" name="guestName" type="text" maxlength="40" />
+                <input id="guestName" name="guestName" type="text" maxlength="40" autocomplete="nickname" required aria-describedby="guestNameError" />
+                <span class="field-error" id="guestNameError"></span>
               </div>
 
               <div class="field-row">
                 <label for="guestDream">Favorite dream</label>
-                <input id="guestDream" name="guestDream" type="text" maxlength="60" />
+                <input id="guestDream" name="guestDream" type="text" maxlength="80" aria-describedby="guestDreamError" />
+                <span class="field-error" id="guestDreamError"></span>
               </div>
 
               <div class="field-row">
@@ -556,26 +611,30 @@
                   id="guestMessage"
                   name="guestMessage"
                   rows="4"
-                  maxlength="220"
+                  maxlength="300"
                   required
+                  aria-describedby="guestMessageError"
                 ></textarea>
+                <span class="field-error" id="guestMessageError"></span>
               </div>
 
               <div class="form-actions">
-                <button class="primary-btn" type="submit">SIGN THE GUESTBOOK</button>
+                <button class="primary-btn" type="submit" id="signGuestbookBtn">PIN MY NOTE</button>
                 <button class="secondary-btn small" type="button" id="clearGuestbookBtn">
-                  CLEAR ENTRIES
+                  CLEAR MY NOTES
                 </button>
               </div>
 
-              <p class="form-feedback" id="guestbookFeedback" aria-live="polite"></p>
+              <p class="guestbook-limit-note">Up to 50 keepsakes, stored only in this browser.</p>
+              <p class="form-feedback" id="guestbookFeedback" role="status" aria-live="polite"></p>
             </form>
 
-            <aside class="entries-panel card-sheen" aria-live="polite">
+            <aside class="entries-panel card-sheen">
               <div class="entries-header">
-                <h4>Dream comments</h4>
-                <span class="tiny-note">Stored only in your browser</span>
+                <h4>Notes from dreamers</h4>
+                <span class="guestbook-count" id="guestbookCount">0 notes</span>
               </div>
+              <p class="guestbook-empty" id="guestbookEmpty">The page is still blank. Be the first to leave Pip a little bedtime note.</p>
               <ul id="guestbookEntries" class="guestbook-entries"></ul>
             </aside>
           </div>
